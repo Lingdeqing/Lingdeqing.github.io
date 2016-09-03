@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:hover, a:active{
+	color: #c00;
+}
+
+body{
+	background-color: #F5F5F5;
+}
+
+
+
+/*top*/
+.top{
+	height: 27px;
+	background: url(../image/top_bg.jpg) repeat-x;
+}
+
+.top-content{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.top-content ul{
+	float: right;
+}
+.top-content li{
+	float: left;
+	list-style-image: url(../image/li_bg.gif);
+	width:70px;
+	line-height: 27px;
+}
+.top-content a:link, .top-content a:visited{
+	text-decoration: none;
+	color: #8E8E8E;
+}
+
+.top-content a:hover, .top-content a:active{
+	text-decoration: underline;
+	color: #e00;
+}
+
+
+.wrap{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+/*logo*/
+.logo{
+	height: 80px;
+	background-color: #fff;
+}
+.logo-left{
+	float: left;
+	width: 200px;
+}
+.logo-right{
+	float: right;
+	width:300px;
+	margin-top: 25px;
+	color: #8E8E8E;
+}
+.logo-right img{
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.tel{
+	font-family: "Microsoft Yahei";
+	font-size: 16px;
+	color: #c00;
+}
+
+/*nav*/
+.nav{
+	height: 40px;
+	clear: both;
+}
+.nav-left{
+	width: 10px;
+	height: 40px;
+	background: url(../image/nav_left.jpg) no-repeat;
+	float: left;
+}
+.nav-mid{
+	width: 980px;
+	height: 40px;
+	background: url(../image/nav_bg.jpg) repeat-x;
+	float: left;
+}
+.nav-right{
+	width: 10px;
+	height: 40px;
+	background: url(../image/nav_right.jpg) no-repeat;
+	float: left;
+}
+.nav-mid ul{
+	float: left;
+}
+.nav-mid li{
+	list-style: none;
+	float: left;
+	width: 100px;
+	text-align: center;
+}
+.nav-mid li a{
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 40px;
+	font-family: "Microsoft Yahei";
+}
+.nav-mid li a:link, .nav-mid li a:visited{
+	color: #fff;
+}
+.nav-mid li a:hover, .nav-mid li a:active{
+	color: #ff0;
+}
+.nav-mid form{
+	float: right;
+}
+.nav-mid .search-text{
+	width: 200px;
+	height: 30px;
+	margin-top: 4px;
+	margin-right: 30px;
+	padding-right: 30px;
+	border: 1px solid #fff;
+	background: #fff url(../image/search.jpg) right center no-repeat;
+}
+
+/*焦点图*/
+#focus-pic{
+	height: 310px;
+	overflow: hidden;
+}
+
+/*底部版权*/
+.copyright-wrap{
+	background-color: #E8E8E8;
+
+	margin-top: 10px;
+}
+.copyright{
+	padding-top: 15px;
+	font-size: 14px;
+	font-family: "Microsoft Yahei";
+	color: #666;
+	font-weight: normal;
+	overflow: hidden;
+	width: 1000px;
+	margin: 0 auto;
+}
+.copyright dd, .copyright dt{
+	height: 20px;
+	line-height: 20px;
+}
+.copyright dl{
+	float: left;
+	width: 170px;
+	padding-left: 30px;
+	border-right: 1px solid #c9c8bb;
+}
+.weixin{
+	padding-left: 40px;
+	width: 150px;
+	border-right: 1px solid #c9c8bb;
+	float: left;
+}
+
+
+
+/*首页主要内容区*/
+.main{
+	margin-top: 5px;
+	background-color: #fff;
+	overflow: hidden;
+	font-family: "Microsoft Yahei";
+}
+.news{
+	width: 340px;
+	height: 340px;
+	margin-right: 7px;
+	border: 1px solid #E8E8E8;
+	float: left;
+}
+.course{
+	width: 410px;
+	height: 340px;
+	margin-right: 7px;
+	border: 1px solid #E8E8E8;
+	float: left;
+}
+.sidebar{
+	width: 230px;
+	height: 340px;
+	border: 1px solid #E8E8E8;
+	float: left;
+}
+
+.content-box{
+	line-height: 25px;
+	font-size: 14px;
+}
+.content-title{
+	height: 40px;
+	margin: 4px 4px 2px;
+	border: 1px solid #E8E8E8;
+	line-height: 40px;
+}
+.content-title h1{
+	font-size: 16px;
+	color: #786f66;
+	font-weight: bold;
+	float: left;
+	text-indent: 10px;
+}
+.content-title a{
+	display: block;
+	float: right;
+	width: 70px;
+	text-decoration: none;
+	color: #999;
+}
+.content-title a:hover, .content-title a:active{
+	color: #f00;
+}
+
+.content-items{
+	border: 1px solid #E8E8E8;
+	margin: 4px 4px 2px;
+	padding: 5px;
+}
+
+.key-item{
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-right: 5px;
+}
+.key-item img{
+	width: 113px;
+	height: 88px;
+	float: left;
+}
+.key-item p{
+	margin-left: 120px;
+}	
+.key-item p a{
+	color: #c00;
+}
+.key-item p a:hover, .key-item p a:active{
+	color: #f00;
+}	
+.items-list{
+	list-style-type: none;
+	
+	width: 330px;
+}
+.items-list li{
+	background: url(../image/list.jpg) no-repeat;	
+	padding-left: 5px;
+}
+.items-list a{
+	text-decoration: none;
+	color: #000;
+}
+.items-list a:hover, .items-list a:active{
+	color: #f00;
+}
+.items-list .news-date{
+	float: right;
+	display: block;
+	width: 100px;
+	font-size: 12px;
+	color: #999;
+}
+
+.course .content-items ul{
+	list-style-type: none;
+	background:url(../image/product_type_bg.jpg) no-repeat;
+	overflow: hidden;
+}
+
+.course .content-items ul li{
+	width: 80px;
+	float: left;
+	margin-left: 10px;
+}
+
+
+
+

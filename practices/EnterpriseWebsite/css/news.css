@@ -1,0 +1,74 @@
+
+/*内容标题*/
+.content-title{
+	height: 40px;
+	margin: 4px 4px 2px;
+	border: 1px solid #E8E8E8;
+	line-height: 40px;
+}
+.content-title h2{
+	font-size: 16px;
+	color: #786f66;
+	font-weight: bold;
+	float: left;
+	text-indent: 10px;
+}
+.content-title a{
+	display: block;
+	float: right;
+	width: 70px;
+	text-decoration: none;
+	color: #999;
+}
+.content-title a:hover, .content-title a:active{
+	color: #f00;
+}
+
+
+
+.news-nav{
+	width: 191px;
+	float: left;
+	border: 1px solid #eee;
+	margin-right: 5px;
+}
+.news-nav ul li{
+	list-style-type: none;
+	list-style-image: url(../image/li_bg.gif);
+	margin-left: 18px;
+	line-height: 24px;
+	height: 24px;
+}
+
+
+.news-entry{
+	overflow: hidden;
+}
+
+.news-list li{
+	margin-left: 20px;
+	line-height: 24px;
+	list-style-type: none;
+	list-style-image: url(../image/list.jpg);
+}
+.news-list span{
+	float: right;
+}
+
+
+/*页码样式*/
+.page-code{
+	margin: 0 auto;
+	width: 300px;
+}
+.page-code a{
+	padding: 3px 8px;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	border: 1px solid #ccc;
+}
+.page-code a:hover, .page-code a:active{
+	color: #fff;
+	background: #c00;
+}

@@ -67,6 +67,7 @@ header .login a{
 	position: relative;
 	width: 100%;
 	height: 690px;
+	overflow: hidden;
 }
 .sec-1 img{
 	display: block;

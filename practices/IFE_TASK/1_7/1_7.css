@@ -51,6 +51,7 @@ nav a:hover, nav a:active{
 }
 
 
+
 header .login a{
 	float: right;
 	margin-right: 8%;
@@ -58,7 +59,7 @@ header .login a{
 	line-height: 60px;
 	font-size: 16px;
 	padding-left: 16px;
-	background: url(image-1-7/login.png) left no-repeat;	
+	background: url(image-1-7/login.jpg)  left no-repeat;
 }
 
 
@@ -166,7 +167,7 @@ header .login a{
 }
 .sec-4 form ul li:hover{
 	background-color: #be4e48;
-	background-image:url(image-1-7/icon5.png);
+	background-image:url(image-1-7/icon5.jpg);
 	background-position: 2%;
 	background-repeat: no-repeat;
 	color: #fff;
@@ -186,7 +187,7 @@ header .login a{
 	height: 38px;
 }
 .sec-4 form input[type="text"]{
-	background: url(image-1-7/mail.png) no-repeat;
+	background: url(image-1-7/mail.jpg) no-repeat;
 	background-position: 92% center;
 	background-color: #fff;
 }
@@ -441,7 +442,7 @@ header .login a{
 	width: 40px;
 	float: right;
 	color: #231815;
-	background: url(image-1-7/icon6.png) left no-repeat;
+	background: url(image-1-7/icon6.jpg) left no-repeat;
 	padding-left: 14px;
 }
 .sec-8 ul a:hover, .sec-8 ul a:active{

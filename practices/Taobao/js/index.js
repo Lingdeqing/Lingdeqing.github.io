@@ -1,5 +1,34 @@
 window.onload = function () {
 	banner();
+
+	var shopClass1 = document.getElementById('shop-class-1');
+	var dlList = shopClass1.getElementsByTagName('dl');
+	for(var i = 0; i < dlList.length; i++){
+		dlList[i].index = i+1;
+
+		dlList[i].onmouseover = show;
+		dlList[i].onmouseout = hide;
+
+		var shopClass2 = document.getElementById('shop-class-2-'+ dlList[i].index);
+		shopClass2.onmouseover = function(){
+			this.style.display = 'block';
+		}
+		shopClass2.onmouseout = function(){
+			this.style.display = 'none';
+		}
+	}
+	function show(event){
+		var shopClass2 = document.getElementById('shop-class-2-'+ this.index)
+		if(shopClass2){
+			shopClass2.style.display = 'block';
+		}
+	}
+	function hide(event){
+		var shopClass2 = document.getElementById('shop-class-2-'+ this.index)
+		if(shopClass2){
+			shopClass2.style.display = 'none';
+		}
+	}
 };
 
 //banner轮播特效

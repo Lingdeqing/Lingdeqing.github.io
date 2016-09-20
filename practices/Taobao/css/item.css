@@ -1,0 +1,70 @@
+.main{
+	margin-top: 18px;
+}
+
+
+
+/*商品列表页左侧商品类别样式*/
+
+/*引用common.css中样式*/
+
+/*右侧样式*/
+.main-right{
+	width: 810px;
+}
+
+/*右侧banner样式*/
+.item-main-banner {
+	width: 100%;
+	height: 326px;
+	overflow: hidden;
+}
+.item-main-banner img{
+	width: 100%;
+	height: 100%;
+}
+
+/*右侧商品列表样式*/
+.item-main-content-h h3{
+	padding-left: 14px;
+	width: 180px;
+	height: 40px;
+	font: 14px/40px "宋体";
+	position: relative;
+	border-bottom: 2px solid #096dba;
+	margin-bottom: -2px;
+}
+.item-main-content-h{
+	width: 100%;
+	height: 40px;
+	border-bottom: 2px solid #ccc;
+}
+.item-main-content-b{
+	width: 100%;
+	height: 560px;
+}
+.item-main-content-b li{
+	font:12px/18px "宋体";
+	padding-left: 14px;
+	width: 188px;
+	height: 280px;
+	float: left;
+}
+.item-main-content-b .item-img{
+	height: 174px;
+	width:100%;
+	overflow: hidden;
+}
+.item-main-content-b p{
+	width: 162px;
+	height: 54px;
+	overflow: hidden;
+}
+.item-main-content-b .price{
+	color: #d4105a;
+	font-weight: bold;
+}
+.item-main-content-b .comment-num{
+	color: #085c9b;
+	font-style: normal;
+}

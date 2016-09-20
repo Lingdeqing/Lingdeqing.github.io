@@ -1,0 +1,217 @@
+.form{
+	border: 1px solid #ccc;
+
+	margin: 20px auto;
+}
+.form-title{
+	background: #f3f3f3;
+	border-bottom: 1px solid #ccc;
+	font: bold 16px/32px "Microsoft Yahei","微软雅黑";
+	color: #444;
+	text-indent: 12px;
+}
+.form label{
+	width: 115px;
+	padding-right: 5px;
+	display: inline-block;
+	font: 16px/36px "Microsoft Yahei","微软雅黑";
+	margin-left: 30px;
+}
+.form label span{
+	color:#f00;
+}
+/*文字两端对齐*/
+.form label .text-align-both{
+	display: inline-block;
+	overflow:hidden;
+	height:36px;
+	text-align:justify;
+	text-align-last:justify;
+	width:  90px;
+	vertical-align: middle;
+}
+.form label .text-align-both:after{
+	display:inline-block;
+	content:'';
+	overflow:hidden;
+	width:100%;
+	height:0;
+}
+.form input.char10{
+	width: 110px;
+	height: 26px;
+	font: 16px/26px "Microsoft Yahei","微软雅黑";
+	color: #888;
+	text-indent: 10px;
+}
+.form input.char26{
+	width: 400px;
+	height: 26px;
+	font: 16px/26px "Microsoft Yahei","微软雅黑";
+	color: #888;
+	text-indent: 10px;
+}
+.form input[type="button"]{
+	height: 28px;
+	padding-left: 20px;
+
+	padding-right: 20px;
+
+	text-align: center;
+	cursor: pointer;
+	font: 16px/28px "Microsoft Yahei","微软雅黑";
+}
+.form input.blue-btn{
+	color: #fff;
+	background: #3a88f2;
+}
+.form input.white-btn{
+	color: #000;
+	background: #fff;
+}
+.form input.red-btn{
+	color: #fff;
+	background: #e50007;
+}
+.form input{
+	border: 1px solid #ccc;
+
+}
+.form input.confirm-addr-btn{
+	margin: 22px auto 16px 32px;
+}
+
+
+.dropdown{
+	display: inline-block;
+	height: 26px;
+	max-width: 200px;
+	line-height: 26px;
+	border:1px solid #bfbfbf;
+	position: relative;
+	cursor: pointer;
+	vertical-align: center;
+}
+.dropdown a{
+	text-decoration: none;
+	color: #444;
+}
+.dropdown .dropdown-toggle{
+	padding-left: 12px;
+	padding-right: 12px;
+	height: 26px;
+}
+.dropdown .dropdown-menu{
+	position: absolute;
+	background: #fff;
+	width: 100%;
+	text-indent: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	left: -1px;
+	top: 27px;
+	border: 1px solid #bfbfbf;
+	border-bottom: none;
+	z-index: 1000;
+}
+.dropdown .dropdown-menu li{
+	border-bottom: 1px solid #bfbfbf;
+}
+.dropdown .dropdown-menu li:hover{
+	background: #bfbfbf;
+}
+.dropdown .dropdown-menu li:hover > a{
+	color: #eee;
+}
+.dropdown .caret{
+	border-style: solid;
+	border-color: #317ee7 transparent transparent transparent;
+	border-width: 8px 8px 0px 8px;
+	display: inline-block;
+}
+.dropdown .hide{
+	display: none;
+}
+
+.submit-form p, .submit-form form{
+	text-align: right;
+	margin:20px;
+}
+.submit-form p{
+	font-size: 16px;
+	color: #929292;
+}
+.submit-form .price{
+	font-size: 24px;
+	color: #e50007;
+	font-weight: bold;
+}
+table{
+	font-size: 14px;
+	width: 100%;
+	line-height: 36px;
+	color: #666;
+}
+table td, table th{
+	text-indent: 32px;
+	text-align: left;
+}
+table tr{
+	height: 36px;
+}
+table .price{
+	color: #d70000;
+	font-weight: bold;
+}
+table .gift{
+	color: #444;
+}
+.tab-item-center{
+	text-align: center;
+}
+.divider{
+	height: 0;
+}
+.divider td{
+	border-top: 1px solid #bfbfbf;
+}
+.tab-container{
+	margin-bottom: 20px;
+
+	border-bottom: 1px solid #bfbfbf;
+}
+
+.product-info-tab .mark-red{
+	color: #d70000;
+}
+.product-info-tab .mark-blue{
+	color: #3377ff;
+}
+.product-info-tab p{
+	text-indent: 40px;
+	font: 14px/20px "Microsoft Yahei";
+	color: #666;
+}
+.product-info-tab .media{
+	margin-top: 30px;
+	margin: 40px;
+}
+.buy-progress{
+	margin-top: 24px;
+	margin-right: 76px;
+}
+.buy-progress-txt span.s1{
+	width: 40%;
+	display: inline-block;
+}
+.buy-progress-txt span.active{
+	color: #fff001;
+}
+.buy-progress-txt span.s2{
+	width: 35%;
+	display: inline-block;
+}
+.buy-progress-txt span.s3{
+	width: 25%;
+	display: inline-block;
+}

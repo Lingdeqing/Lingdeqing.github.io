@@ -1,0 +1,63 @@
+body{
+	padding-bottom: 30px;
+}
+.header{
+	height: 86px;
+	background: #1d7ad9;
+}
+.header h1{
+	background: url(../img/logo2.png) left no-repeat;
+	padding-left: 134px;
+	font: 22px/86px "Microsoft Yahei";
+	color: #fff;
+}
+
+.main-body form{
+	width: 370px;
+	margin: 16px auto;
+	border: 1px solid #ddd;
+	
+	font: 16px/36px "宋体";
+	color: #999;
+	padding: 56px 90px;
+	position: relative;
+}
+.main-body form input[type="text"],.main-body form input[type="submit"]{
+	border: 1px solid #ccc;
+	height: 36px;
+	width: 312px;
+	text-indent: 6px;
+}
+.other-account a{
+	color: #666;
+	font: 16px/22px "Microsoft Yahei";
+}
+.other-account .more{
+	background: url(../img/icon.png) right no-repeat;
+	padding-right: 10px;
+}
+.other-account a:hover, .other-account a:active{
+	text-decoration: none;
+	color: #1d7ad9;
+}
+
+.main-body form input[type="submit"]{
+	text-align: center;
+	font-weight: bold;
+	color: #606060;
+	background: #e1e1e1;
+}
+
+.reg{
+	width: 112px;
+	height: 30px;
+	font: 16px/30px "Microsoft Yahei";
+	color: #fff;
+	background: #7cbe56;
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	bottom: -30px;
+	right: 80px;
+	border-radius: 0 0 5px 5px;
+}

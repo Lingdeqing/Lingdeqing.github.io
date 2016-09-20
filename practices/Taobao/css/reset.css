@@ -7,7 +7,47 @@ li{list-style:none;}
 input,select,textarea{outline:none;border:none;background: none;}
 textarea{resize:none;}
 a{text-decoration:none; color:#666;}
-a:hover, a:active{color:#ff8800; text-decoration: underline;}
+a:hover, a:active{text-decoration: underline;color:#ff8800;}
+
+
+/*公用*/
+
 /*清浮动*/
 .clearfix:after{content:"";display:block;clear:both;}
 .clearfix{zoom:1;}
+
+.center-w-1000{width: 1000px;margin: 0 auto;}
+
+.fl{float: left;}
+.fr{float: right;}
+.hide{display: none;}
+.show{display: block;}
+.a-hover-2 a:hover, .a-hover-2 a:active{color:#ff8800;text-decoration: underline;}
+
+/*页码*/
+.comp-page{
+	text-align: center;
+}
+.comp-page a{
+	border: 1px solid #c9c9c9;
+	padding: 5px 8px;
+	color: #333;
+	font:12px/20px "宋体";
+	height: 20px;
+}
+.comp-page input{
+
+	border: 1px solid #c9c9c9;
+	font:12px/14px "宋体";
+	width: 38px;
+	text-align: center;
+	height: 20px;
+}
+.comp-page input[type="button"]{
+	background: #e8e8e8;
+	cursor: pointer;
+}
+.comp-page a.etc{
+	border: none;
+	font-weight: bold;
+}

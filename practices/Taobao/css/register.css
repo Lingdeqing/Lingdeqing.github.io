@@ -1,0 +1,82 @@
+.header{
+	height: 86px;
+	background: #1d7ad9;
+}
+.header h1{
+	background: url(../img/logo2.png) left no-repeat;
+	padding-left: 134px;
+	font: 22px/86px "Microsoft Yahei";
+	color: #fff;
+}
+
+.main-body form{
+	width: 634px;
+	margin: 16px auto;
+	border: 1px solid #ddd;
+	
+	font: 16px/36px "宋体";
+	color: #999;
+	padding: 56px;
+}
+.main-body form label{
+	width: 262px;
+	text-align: right;
+	display: inline-block;
+}
+.main-body form label i{
+	display: inline-block;
+	margin-right: 5px;
+	color: #f00;
+	font:16px/36px "Microsoft Yahei";
+}
+.main-body form label.valid i{
+	display: none;
+}
+.main-body form input[type="text"],.main-body form input[type="submit"]{
+	border: 1px solid #ccc;
+	height: 36px;
+	width: 270px;
+	text-indent: 6px;
+}
+.main-body form a{
+	color: #005aa0;
+}
+
+.main-body form input[type="submit"]{
+	text-align: center;
+	font-weight: bold;
+	color: #606060;
+	background: #e1e1e1;
+}
+
+
+.main-body form input[type="checkbox"]+i{
+    display: none;
+    position: absolute;
+    left: 1px;
+    top: 0px;
+    font-size: 6px;
+    color: #0f0;
+}
+
+.main-body form input[type="checkbox"]:checked + i{
+	display: inline-block;
+}
+
+.checkbox{    
+    width: 12px;
+    height: 12px;
+    border: 1px solid #000;
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: -6px;
+}
+
+.main-body form input[type="checkbox"]{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	opacity: 0;
+}

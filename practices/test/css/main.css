@@ -1,0 +1,437 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+body{font-size:12px;}
+img{border:none;}
+li{list-style:none;}
+input,select,textarea{outline:none;border:none;background: none;}
+textarea{resize:none;}
+
+/*公用*/
+
+/*清浮动*/
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+
+
+
+.container{
+	width: 1920px;
+}
+
+
+.center{
+	width: 1358px;
+	margin: 0 auto;
+}
+
+
+.header{
+	background: url(../img/banner.jpg);
+	height: 839px;
+}
+
+/*topbar样式*/
+.topbar{
+	height: 40px;
+	line-height: 40px;
+	padding-top: 10px;
+}
+.topbar-right{
+	float: right;
+}
+.topbar-right > div{
+	float: left;
+}
+/*兼容ie6*/
+.topbar-right div{
+	float: left;
+}
+.topbar-right-account{
+	margin-right: 34px;
+	_margin-top:8px;
+}
+.topbar-right-account a{
+	display: inline-block;
+	width: 26px;
+}
+.topbar-right-country{
+	margin-right: 36px;
+}
+.topbar-right-country,.topbar-right-country a{
+	font-family: "Montserrat";
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+}
+.topbar-right-shopcar{
+	background: url(../img/shopcar.png) center center no-repeat;
+	display: inline-block;
+	width: 50px;
+	height: 40px;
+	color: #fff;
+	font-size: 12px;
+	font-family: "Arimo";
+	position: relative;
+}
+.topbar-right-shopcar span{
+	position: absolute;
+    top: -4px;
+    left: 10px;
+}	
+.topbar-right-search{
+	background: url(../img/search.png) center center no-repeat;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+}
+
+/*navbar样式*/
+.navbar{
+	height: 50px;
+	_margin-top: 20px;
+}
+.navbar-left{
+	float: left;
+}
+.navbar-left-logo{
+	background: url(../img/logo.png) center center no-repeat;
+	_background: url(../img/logo.png) center top no-repeat;
+	width: 300px;
+	height: 50px;
+}
+.navbar-right{
+	float: right;
+}
+
+/*兼容ie7*/
+*+html .navbar-right{
+	height: 50px;
+	line-height: 50px;
+}
+.navbar-right-nav{
+}
+.navbar-right-nav li{
+	float: left;
+	padding-right: 30px;
+}
+.navbar-right-nav li:first-child{
+	background: url(../img/nav-icon.png) 92% center no-repeat;
+}
+.navbar-right-nav li a{
+	font-family: "Montserrat";
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+}
+/*兼容ie8*/
+.navbar-right-nav li.login{
+	padding-right: 0;
+}
+.navbar-right-nav li.login a{
+	color: #f36c24;
+}
+
+.navbar-right-nav li a:hover,.navbar-right-nav li a:active{
+	color: #f36c24;
+}
+
+
+/*标题样式*/
+.title{
+	font-family: "Montserrat";
+	color: #fff;
+	margin-top: 250px;
+}
+.title h1{
+	font-size: 86px;
+	line-height: 92px;
+	font-weight: bold;
+}
+.title h2{
+	font-size: 40px;
+	line-height: 50px;
+}
+
+.banner-button{
+	margin-top: 38px;
+	font-family: "Montserrat";
+	font-size: 14px;
+	line-height: 64px;
+	height: 64px;
+	width: 302px;
+	color: #fff;
+	background: #f36c24;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+}
+.banner-button:hover{
+	background: #f38a24;
+}
+
+/*产品列表样式*/
+.sec-1{
+	height: 500px;
+}
+.product-list{
+	width: 1358px;
+	height: 360px;
+	margin-top: 72px;
+	margin-bottom: 70px;
+}
+.product-list > li{
+	float: left;
+	margin-right: 24px;
+}
+
+/*//ie6兼容*/
+.product-list li{
+	float: left;
+	margin-right: 24px;
+}
+.product-list  li.last-product{
+	margin-right: 0;
+}
+
+.product-list > li:last-child{
+	margin-right: 0;
+}
+/*兼容ie8*/
+.product-list > li.last-product{
+	margin-right: 0;
+}
+
+.product-img{
+	background: #ececec;
+	width: 206px; 
+	height:212px;
+	display: inline-block;
+}
+
+.product-name{
+	font-family: "Arimo";
+	font-size: 16px;
+	line-height: 40px;
+	color: #4d4d4f;
+	margin-top: 10px;
+}
+.product-list .price{
+	font-family: "Arimo";
+	font-size: 24px;
+	line-height: 24px;
+	color: #f36c24;
+	font-weight: bold;
+}
+.add-cart-btn{
+	width: 144px;
+	height: 58px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	background: #f36c24;
+	color: #fff;
+	font-family: "Montserrat";
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 58px;
+	margin-top: 22px;
+}
+.add-cart-btn:hover{
+	background: #f38a24;
+}
+
+/*视频列表样式*/
+.sec-2{
+	height: 730px;
+	background: #000;
+}
+.videos{
+	width: 1358px;
+	overflow: hidden;
+}
+.videos-wrapper{
+	width: 1386px;
+	height: 758px;
+	_margin-bottom: -28px;
+}
+.video{
+	_display: inline;
+	_overflow: hidden;
+	width: 665px;
+	height: 351px;
+	float: left;
+	margin-right: 28px;
+	margin-bottom: 28px;
+	position: relative;
+}
+.video-btn{
+    display: inline-block;
+    _display: none;
+    position: absolute;
+    top: 152px;
+    left: 300px;
+    width: 65px;
+    height: 46px;
+    background: #cc181e;
+    border-radius: 10px;
+    line-height: 46px;
+    font-size: 14px;
+    text-indent: 28px;
+}
+.video-btn:hover{
+	background: #dd181f;
+}
+.video-btn span{
+	display: inline-block;
+    border-style: solid;
+    border-width: 8px 8px 8px 15px;
+    border-color: transparent transparent transparent #fff;
+    width: 0;
+    height: 0;
+}
+
+/*pannel样式*/
+.pannel{
+	width: 960px;
+	height: 630px;
+	float: left;
+	color: #fff;
+	text-align: center;
+	_overflow: hidden;
+}
+.pannel-gray{
+	background: #d5d3d3;
+}
+.pannel-white{
+	background: #fff;
+}
+.pannel-orange{
+	background: #f36c24;
+}
+.pannel-darkgray{
+	background: #4d4d4f;
+}
+.pannel-green{
+	background: #87d22d;
+}
+.pannel-yellow{
+	background: #ffcd00;
+}
+.pannel h1{
+	font-size: 88px;
+	line-height: 92px;
+	margin-top: 160px;
+}
+.pannel h2{
+	font-size: 40px;
+	line-height: 112px;
+
+}
+.pannel .panel-btn{
+	display: inline-block;
+	padding: 0 40px;
+	font-family: "Montserrat";
+	font-size: 14px;
+	height: 62px;
+	color: #f36c24;
+	font-weight: bold;
+	background: #fff;
+	text-decoration: none;
+	line-height: 62px;
+	margin-top: 100px;
+}
+.pannel .panel-btn:hover{
+	color:  #f38a24;
+}
+.pannel .panel-text{
+	width: 530px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: -40px;
+}
+
+
+
+/*faq和tip样式*/
+.big-btn{
+	display: inline-block;
+	width: 821px;
+	height: 300px;
+	margin:74px 68px;
+	color: #fff;
+	font-size: 86px;
+	font-family: "Montserrat";
+	font-weight: bold;
+	line-height: 300px;
+	text-align: center;
+	text-decoration: none;
+}
+.faq-btn{
+	background: #f36c24;
+}
+.faq-btn:hover{
+	background: #f38a24;;
+}
+.tip-btn{
+	background: #313230;
+}
+.tip-btn:hover{
+	background: #4d4d4f;
+}
+
+
+/*footer样式*/
+.footer-navs{
+	height: 200px;
+	background: #000;
+	padding-top: 64px;
+}
+.footer-navs a{
+	font-size: 12px;
+	line-height: 24px;
+	font-family: "Montserrat";
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+}
+.footer-nav{
+	float: left;
+	margin-right: 100px;
+}
+.footer-nav li{
+
+}
+.footer-account{
+	margin-right: 0;
+	float: right;
+}
+.footer-account li{
+	float: left;
+	margin-left: 10px;
+}
+
+.bottombar{
+	background: #f36c24;
+	height: 86px;	
+}
+
+.bottombar-left{
+	float: left;
+}
+.bottombar-right{
+	float: right;
+	margin-top: 26px;
+}
+.copy{
+	font-size: 14px;
+	font-family: "Montserrat";
+	font-weight: bold;
+	line-height: 86px;
+	color: #fff;
+}
+.card{
+	margin-left: 8px;
+}

@@ -1,0 +1,305 @@
+// 图片方式实现
+// @mixin toolbar-bg-pos($pos){
+// 	background-position: 2px $pos; 
+// 	&:hover{
+// 		background-position:2px ($pos - 62);	
+// 	}
+// }
+
+// $toolbar-size: 56px;
+
+// .toolbar{
+// 	width:$toolbar-size;
+// 	position: fixed;
+// 	left:50%;
+// 	bottom:100px;
+// 	margin-left: -$toolbar-size / 2;
+// }
+
+// .toolbar-item, .toolbar-layer{
+// 	background-image: url(../img/toolbar.png);
+// 	background-repeat: no-repeat;
+// }
+
+// .toolbar-item{
+// 	width: $toolbar-size;
+// 	height: $toolbar-size;
+// 	display: block;
+// 	position: relative;
+// 	@include transition(background-position 1s);
+	
+// 	&:hover{
+// 		.toolbar-layer{
+// 			@include opacity(1);
+// 			@include scale(1);
+// 		}
+// 	}
+
+// }
+
+// .toolbar-item-weixin {
+// 	@include toolbar-bg-pos(-796px);
+// }
+
+// .toolbar-item-feedback {
+// 	@include toolbar-bg-pos(-424px);
+// }
+
+// .toolbar-item-app {
+// 	@include toolbar-bg-pos(-548px);
+// }
+
+// .toolbar-item-top {
+// 	@include toolbar-bg-pos(-672px);
+// }
+
+// .toolbar-layer{
+// 	position: absolute;
+// 	width: 172px;
+// 	height: 212px;
+// 	bottom: -8px;
+// 	right: $toolbar-size - 6;
+// 	@include opacity(0);
+// 	@include scale(0.01);
+// 	@include transform-origin(right bottom);
+// 	@include transition(all 1s);
+// }
+
+
+
+// 字体图标方式实现
+// $toolbar-size: 56px;
+
+// .toolbar{
+// 	width: $toolbar-size;
+// 	position:fixed;
+// 	left:50%;
+// 	margin-left: $toolbar-size / 2;
+// 	bottom:50px;
+// }
+
+// .toolbar-item, .toolbar-btn, .toolbar-item-icon, .toolbar-item-text{
+// 	width: $toolbar-size;
+// 	height: $toolbar-size;
+// }
+
+// .toolbar-item{
+// 	margin-top: 1px;
+// 	display: block;
+// 	position: relative;
+
+// 	&:hover{
+// 		.toolbar-item-icon{
+// 			top: -$toolbar-size;
+// 		}
+
+// 		.toolbar-item-text{
+// 			top: 0;
+// 		}
+
+// 		.toolbar-layer{
+// 			@include opacity(1);
+// 		 	@include scale(1);
+// 		}
+// 	}
+// }
+
+// .toolbar-btn{
+// 	overflow: hidden;
+// 	display: block;
+// 	position: relative;
+// }
+
+// .toolbar-item-icon, .toolbar-item-text{
+// 	left: 0;
+// 	position: absolute;
+// 	text-align: center;
+// 	color: #fff;
+// 	@include transition(top 1s);
+// }
+
+// .toolbar-item-icon{
+// 	top: 0;
+// 	line-height: $toolbar-size;
+// 	background-color: #d0d6d9;
+// 	font-size: 30px;
+// }
+// .toolbar-item-text{
+// 	top: $toolbar-size;
+	
+// 	line-height: 1.2;
+// 	background-color: #98a1a6;
+// 	font-size: 12px;
+// 	padding-top: 12px;	
+// }
+// .toolbar-layer{
+// 	position: absolute;
+// 	right: 100%;
+// 	bottom: 0;
+//  	width: 172px;
+ 	
+//  	background-image: url(../img/toolbar_img.png);
+//  	background-repeat: no-repeat;
+//  	@include opacity(0);
+//  	@include scale(0.01);
+//  	@include transform-origin(right bottom);
+//  	@include transition(all 1s);
+// }
+// .toolbar-layer-app{
+// 	background-position:0 -222px;
+// 	height: 194px;
+// }
+// .toolbar-layer-weixin{
+// 	background-position: 0 0;
+// 	height: 212px;
+// }
+
+
+//伪元素实现
+@mixin toolbar-layer($bgTop){
+	content:"";
+	display: block;
+	width: 172px;
+	height: 194px;
+	position: absolute;
+	right: 100%;
+	bottom: 0;
+	background-image: url(../img/toolbar_img.png);
+	background-repeat: no-repeat;
+	background-position:0 $bgTop; 
+
+	@include transform-origin(right bottom);
+	@include opacity(0);
+	@include scale(0.01);
+	@include transition(all 1s);
+}
+
+$toolbar-size: 56px;
+
+.toolbar{
+	width: $toolbar-size;
+	position: fixed;
+	left: 50%;
+	margin-left: $toolbar-size / 2;
+	bottom: 100px;
+
+	@extend [class^="icon-"];
+}
+
+.toolbar-item{
+	display: block;
+	width: $toolbar-size;
+	height: $toolbar-size;
+	position: relative;
+	margin-top: 1px;
+
+	&:hover{
+		&:after{
+			@include opacity(1);
+			@include scale(1);
+		}
+	}
+}
+
+.toolbar-btn{
+	overflow: hidden;
+	position: relative;
+	white-space: pre;
+
+	&, &:before, &:after{
+		display: block;
+		width: $toolbar-size;
+		height: $toolbar-size;
+	}
+
+	&:before, &:after{
+		content:"";
+		position: absolute;
+		left:0;
+		color: #fff;
+		text-align: center;
+		@include transition(top 1s);
+	}
+
+	&:before{
+		top:0;
+		line-height:  $toolbar-size;
+		background-color: #d0d6d9;
+		font-size: 30px;
+	}
+
+	&:after{
+		top:100%;
+		padding-top: 12px;
+		line-height:  1.2;
+		background-color: #d0d6d9;
+		font-size: 12px;
+	}
+
+	&:hover{
+		&:before{
+			top:-100%;
+		}
+		&:after{
+			top:0;
+		}
+	}
+}
+
+.toolbar-item-weixin{
+
+	.toolbar-btn{
+		@extend .icon-weixin;
+
+		&:after{
+			content: "公众\A账号";
+		}
+	}
+	
+	&:after{
+		@include toolbar-layer(-222px);
+	}
+}
+
+.toolbar-item-feedback{
+	
+	.toolbar-btn{
+		@extend .icon-feedback;
+		
+		&:after{
+			content: "意见\A反馈";
+		}
+	}
+	
+}
+
+.toolbar-item-app{
+
+	.toolbar-btn{
+		@extend .icon-app;
+
+		&:after{
+			content: "APP\A下载";
+		}
+	}
+	
+
+	&:after{
+		@include toolbar-layer(0);
+	}
+}
+
+.toolbar-item-top{
+	
+	.toolbar-btn{
+		@extend .icon-top;
+
+		&:after{
+			content: "返回\A顶部";
+		}
+	}
+	
+}
+
+
+

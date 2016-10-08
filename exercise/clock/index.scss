@@ -1,0 +1,97 @@
+$clock-size:200px;/*表盘的大小*/
+$hour-width:10px;/*小时刻度的尺寸*/
+$hour-height:2px;
+$min-width:5px;/*分钟刻度的尺寸*/
+$min-height:2px;
+
+@mixin create-line($width, $height, $wrap, $n, $r){
+	@for $i from 1 through $n{
+		.#{$wrap} li:nth-child(#{$i}){
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: $width;
+			height: $height;
+			transform:translate(-50%, -50%) rotate(($i - 1) * 360deg / $n) translate($r,0);
+			background: #fff;
+		}
+	}
+}
+
+@mixin create-number($wrap, $r){
+	@for $i from 1 through 12{
+		.#{$wrap} li:nth-child(#{$i}){
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform:translate(-50%, -50%) rotate(($i) * 360deg / 12 - 90) translate($r,0);
+			color:#fff;
+
+			span{
+				display: block;
+				transform:rotate(($i) * -30deg + 90);
+			}
+		}
+	}
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style:none;
+}
+.clock{
+	width: $clock-size;
+	height: $clock-size;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	background: #292a38;
+	border-radius: 100%;
+
+
+	.pointer{
+		li{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			background: #fff;
+			transform-origin:-6px 50%;
+		}
+		.hour{
+			width: 45px;
+			height: 3px;
+			transform:translate(0, -50%) rotate(-180deg);
+
+			margin-left: 6px;
+		}
+		.min{
+			width: 60px;
+			height: 2px;
+			transform:translate(0, -50%) rotate(-90deg);
+
+			margin-left: 6px;
+		}
+		.sec{
+			width: 80px;
+			height: 1px;
+			transform:translate(0, -50%) rotate(-0deg);
+
+			margin-left: 6px;
+		}
+		.circle{
+			width: 10px;
+			height: 10px;
+			background: #fff;
+			border-radius: 100%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	@include create-line($hour-width, $hour-height, line-hour, 12, 80px);
+	@include create-line($min-width, $min-height, line-sec, 60, 85px);
+	@include create-number(number, 70px);
+	
+}

@@ -1,0 +1,733 @@
+@charset "UTF-8";
+/*表盘的大小*/
+/*小时刻度的尺寸*/
+/*分钟刻度的尺寸*/
+* {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+.clock {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #292a38;
+  border-radius: 100%; }
+  .clock .pointer li {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #fff;
+    transform-origin: -6px 50%; }
+  .clock .pointer .hour {
+    width: 45px;
+    height: 3px;
+    transform: translate(0, -50%) rotate(-180deg);
+    margin-left: 6px; }
+  .clock .pointer .min {
+    width: 60px;
+    height: 2px;
+    transform: translate(0, -50%) rotate(-90deg);
+    margin-left: 6px; }
+  .clock .pointer .sec {
+    width: 80px;
+    height: 1px;
+    transform: translate(0, -50%) rotate(0deg);
+    margin-left: 6px; }
+  .clock .pointer .circle {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 100%;
+    transform: translate(-50%, -50%); }
+  .clock .line-hour li:nth-child(1) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(0deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(30deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(3) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(60deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(4) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(90deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(5) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(120deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(6) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(150deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(7) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(180deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(8) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(210deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(9) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(240deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(10) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(270deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(11) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(300deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-hour li:nth-child(12) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(330deg) translate(80px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(1) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(0deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(6deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(3) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(12deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(4) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(18deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(5) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(24deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(6) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(30deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(7) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(36deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(8) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(42deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(9) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(48deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(10) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(54deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(11) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(60deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(12) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(66deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(13) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(72deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(14) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(78deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(15) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(84deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(16) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(90deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(17) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(96deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(18) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(102deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(19) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(108deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(20) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(114deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(21) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(120deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(22) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(126deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(23) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(132deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(24) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(138deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(25) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(144deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(26) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(150deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(27) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(156deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(28) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(162deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(29) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(168deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(30) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(174deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(31) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(180deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(32) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(186deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(33) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(192deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(34) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(198deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(35) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(204deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(36) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(210deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(37) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(216deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(38) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(222deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(39) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(228deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(40) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(234deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(41) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(240deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(42) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(246deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(43) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(252deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(44) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(258deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(45) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(264deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(46) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(270deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(47) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(276deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(48) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(282deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(49) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(288deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(50) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(294deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(51) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(300deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(52) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(306deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(53) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(312deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(54) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(318deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(55) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(324deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(56) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(330deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(57) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(336deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(58) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(342deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(59) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(348deg) translate(85px, 0);
+    background: #fff; }
+  .clock .line-sec li:nth-child(60) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(354deg) translate(85px, 0);
+    background: #fff; }
+  .clock .number li:nth-child(1) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(1) span {
+      display: block;
+      transform: rotate(60deg); }
+  .clock .number li:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(2) span {
+      display: block;
+      transform: rotate(30deg); }
+  .clock .number li:nth-child(3) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(3) span {
+      display: block;
+      transform: rotate(0deg); }
+  .clock .number li:nth-child(4) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(30deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(4) span {
+      display: block;
+      transform: rotate(-30deg); }
+  .clock .number li:nth-child(5) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(60deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(5) span {
+      display: block;
+      transform: rotate(-60deg); }
+  .clock .number li:nth-child(6) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(90deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(6) span {
+      display: block;
+      transform: rotate(-90deg); }
+  .clock .number li:nth-child(7) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(120deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(7) span {
+      display: block;
+      transform: rotate(-120deg); }
+  .clock .number li:nth-child(8) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(150deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(8) span {
+      display: block;
+      transform: rotate(-150deg); }
+  .clock .number li:nth-child(9) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(180deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(9) span {
+      display: block;
+      transform: rotate(-180deg); }
+  .clock .number li:nth-child(10) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(210deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(10) span {
+      display: block;
+      transform: rotate(-210deg); }
+  .clock .number li:nth-child(11) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(240deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(11) span {
+      display: block;
+      transform: rotate(-240deg); }
+  .clock .number li:nth-child(12) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(270deg) translate(70px, 0);
+    color: #fff; }
+    .clock .number li:nth-child(12) span {
+      display: block;
+      transform: rotate(-270deg); }
+
+/*# sourceMappingURL=index.css.map */

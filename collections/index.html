@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fun Fun Fun</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/collections.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<a class="active" href="##">Home</a>
+			<a id="aboutme-btn" href="##">About Me</a>
+		</nav>
+	</header>
+	<div class="case-container">
+		<div class="case-item">
+			<a target="_blank" class="case-img" href="http://www.yaolin.win/exercise/clock/"><img  src="img/clock.png" alt=""></a>
+			<a target="_blank" href="http://www.yaolin.win/exercise/clock/" class="case-btn">Demo</a>
+		</div>
+
+		<div class="case-item">
+			<a target="_blank" class="case-img" href="http://www.yaolin.win/exercise/toolbar/"><img  src="img/toolbar.png" alt=""></a>
+			<a target="_blank" href="http://www.yaolin.win/exercise/toolbar/" class="case-btn">Demo</a>
+		</div>
+
+		<div class="case-item">
+			<a target="_blank" class="case-img" href="http://www.yaolin.win/exercise/roundnav/"><img  src="img/roundnav.png" alt=""></a>
+			<a target="_blank" href="http://www.yaolin.win/exercise/roundnav/" class="case-btn">Demo</a>
+		</div>
+
+		<div class="case-item">
+			<a target="_blank" class="case-img" href="http://www.yaolin.win/exercise/css-animation/asshole-round.html"><img  src="img/asshole-round.png" alt=""></a>
+			<a target="_blank" href="http://www.yaolin.win/exercise/css-animation/asshole-round.html" class="case-btn">Demo</a>
+		</div>
+
+		<div class="case-item">
+			<a target="_blank" class="case-img" href="http://www.yaolin.win/exercise/css-animation/wave.html"><img  src="img/wave.png" alt=""></a>
+			<a target="_blank" href="http://www.yaolin.win/exercise/css-animation/wave.html" class="case-btn">Demo</a>
+		</div>
+
+		<div class="case-item">
+			<a target="_blank" class="case-img" href="http://www.yaolin.win/exercise/css-animation/bubble.html"><img  src="img/bubble.png" alt=""></a>
+			<a target="_blank" href="http://www.yaolin.win/exercise/css-animation/bubble.html" class="case-btn">Demo</a>
+		</div>
+
+		<div class="case-item">
+			<a target="_blank" class="case-img" href="http://www.yaolin.win/exercise/css-animation/fontcss"><img  src="img/fontcss.png" alt=""></a>
+			<a target="_blank" href="http://www.yaolin.win/exercise/css-animation/fontcss" class="case-btn">Demo</a>
+		</div>
+	</div>
+	
+	<div id="aboutme-info" class="info-pop">
+		<table>
+			<tr><td><div class="justify-text">作 者 :</div></td><td>Franklin(本名:姚林)</td></tr>
+			<tr><td><div class="justify-text">QQ :</div></td><td>1074274144</td></tr>
+			<tr><td><div class="justify-text">Email :</div></td><td>15851853085@163.com</td></tr>
+		</table>
+		<a href="javascript:;" class="close icon-close"></a>
+		<div class="overlayer"></div>
+	</div>
+
+	<footer>
+		create by franklin
+	</footer>
+	<script type="text/javascript" src="lib/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript">
+	var aboutmeInfo = $('div#aboutme-info');
+	$('a#aboutme-btn').on('click', function () {
+		aboutmeInfo.fadeIn();
+	})
+	aboutmeInfo.find('a.close').on('click', function () {
+		aboutmeInfo.fadeOut();
+	})
+	</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?6a0i4f");
+  src: url("fonts/icomoon.eot?6a0i4f#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?6a0i4f") format("truetype"), url("fonts/icomoon.woff?6a0i4f") format("woff"), url("fonts/icomoon.svg?6a0i4f#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-close:before {
+  content: "\ea0f"; }
+
+body, header, nav, footer, a, div, dl, dt, dd {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+header {
+  background: #3D4250; }
+  header nav {
+    margin-left: 100px; }
+    header nav a {
+      font-size: 18px;
+      height: 40px;
+      line-height: 40px;
+      float: left;
+      padding-left: 25px;
+      padding-right: 25px;
+      color: #fff;
+      transition: all 0.5s ease-in-out; }
+      header nav a.active {
+        background: rgba(255, 255, 255, 0.3); }
+      header nav a:hover {
+        color: #666; }
+    header nav:after {
+      display: table;
+      content: "";
+      clear: both; }
+
+footer {
+  height: 30px;
+  background: #3D4250;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize; }
+
+.info-pop {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*transform:translate(-50%, -50%);*/
+  margin-left: -147px;
+  margin-top: -63px;
+  z-index: 1; }
+  .info-pop table {
+    font-size: 16px;
+    color: #fff;
+    background: #3D4250;
+    border: 1px solid #3D4250;
+    box-shadow: 2px 2px 2px #3D4250;
+    border-radius: 5px; }
+    .info-pop table td {
+      padding: 10px; }
+    .info-pop table .justify-text {
+      overflow: hidden;
+      height: 19px;
+      text-align: justify;
+      text-align-last: justify;
+      width: 70px; }
+      .info-pop table .justify-text:after {
+        display: inline-block;
+        content: "";
+        overflow: hidden;
+        width: 100%;
+        height: 0; }
+  .info-pop .close {
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    right: 5px;
+    top: 5px; }
+  .info-pop .overlayer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1; }
+
+.case-container {
+  padding: 50px 100px;
+  background: #EFEEEB; }
+  .case-container .case-item {
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    float: left; }
+    .case-container .case-item .case-img {
+      display: block;
+      width: 210px;
+      height: 210px;
+      padding: 3px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      transition: all 1s ease; }
+      .case-container .case-item .case-img img {
+        width: 200px;
+        height: 200px; }
+      .case-container .case-item .case-img:hover {
+        border: 2px solid #00ccb3;
+        /*padding: 3px;*/ }
+    .case-container .case-item .case-btn {
+      display: block;
+      width: 98px;
+      height: 26px;
+      padding: 5px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      background: #d9d9d9;
+      color: #000;
+      text-align: center;
+      line-height: 16px;
+      margin: 5px auto;
+      transition: all 0.5s ease-in-out; }
+      .case-container .case-item .case-btn:hover {
+        background: #b4b4b4; }
+  .case-container:after {
+    display: table;
+    content: "";
+    clear: both; }
+
+/*# sourceMappingURL=collections.css.map */

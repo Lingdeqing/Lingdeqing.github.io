@@ -5,8 +5,7 @@ requirejs.config({
 })
 
 requirejs(['jquery'], function ($) {
-
-	setInterval(function () {
+	function clock() {
 
 		var date = new Date(),
 			hour = date.getHours(),
@@ -25,5 +24,8 @@ requirejs(['jquery'], function ($) {
 		$('div.clock>ul.pointer>li.hour').css({
 			transform:'translate(0, -50%) rotate('+hourAngle+'deg)'
 		});
-	}, 500);
+	}
+	clock();
+	$('div.clock').fadeIn();
+	setInterval(clock, 500);
 })

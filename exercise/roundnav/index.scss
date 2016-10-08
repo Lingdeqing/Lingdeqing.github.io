@@ -1,0 +1,68 @@
+$nav-width:400px;
+$nav-height:200px;
+$nav-item-size:60px;
+$nav-btn-size:60px;
+
+@mixin center{
+	position: absolute;
+	left:50%;
+	top: 50%;
+	transform:translate(-50%, -50%);
+}
+
+body{
+	background-color: #292a38;
+	font-family:"Microsoft Yahei";
+
+	.nav-wrap{
+		width: $nav-width;
+		height: $nav-height;
+		@include center;
+		margin-left: -$nav-width / 2;
+		border: 2px dotted #4e5061;
+		border-radius:100%;
+
+		nav{
+			position:absolute;
+			width: 100%;
+			height: 100%;
+			transform: scale(0);
+			opacity: 0;
+			transition:all 0.5s ease-out;
+
+			.nav-item{
+				position:absolute;
+				transform:translate(-50%, -50%);
+				display: block;
+				width: $nav-item-size;
+				height: $nav-item-size;
+				background-color:#f44283;
+				line-height: $nav-item-size;
+			}
+		}
+
+		&.active{
+			nav{
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+		
+		.nav-btn, nav>.nav-item{
+			border-radius:2px;
+			color: #fff;
+			text-align: center;
+			text-decoration: none;
+			text-shadow: 1px 1px 0 #000;
+		}
+
+		.nav-btn{
+			@include center;
+			display: block;
+			width: $nav-btn-size;
+			height: $nav-btn-size;
+			background-color:#15a5f3;
+			line-height: $nav-btn-size;
+		}
+	}
+}

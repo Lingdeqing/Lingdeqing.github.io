@@ -14,7 +14,6 @@ requirejs(['jquery'], function ($) {
 			hourAngle = hour * 360 / 12 - 90,
 			minAngle = min * 360 / 60 - 90,
 			secAngle = sec * 360 / 60 - 90;
-		console.log(sec, hourAngle)
 		$('div.clock>ul.pointer>li.sec').css({
 			transform:'translate(0, -50%) rotate('+secAngle+'deg)'
 		});

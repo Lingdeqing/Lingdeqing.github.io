@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	@font-face {
+	  font-family: 'icomoon';
+	  src:  url('fonts/icomoon.eot?svw149');
+	  src:  url('fonts/icomoon.eot?svw149#iefix') format('embedded-opentype'),
+	    url('fonts/icomoon.ttf?svw149') format('truetype'),
+	    url('fonts/icomoon.woff?svw149') format('woff'),
+	    url('fonts/icomoon.svg?svw149#icomoon') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	[class^="icon-"], [class*=" icon-"] {
+	  /* use !important to prevent issues with browser extensions that change fonts */
+	  font-family: 'icomoon' !important;
+	  speak: none;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-variant: normal;
+	  text-transform: none;
+	  line-height: 1;
+
+	  /* Better Font Rendering =========== */
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+
+	.icon-like:before {
+	  content: "\e900";
+	  color: #fff;
+	  text-shadow:5px 5px 0 #b13947, 10px 10px 0 rgba(0, 0, 0, .15);
+	}
+	
+	.icon-spinner:before {
+	  content: "\e982";
+	  color: #b13947;
+	  animation:spin 1.5s infinite linear;
+	}
+	@keyframes spin{
+		from{
+			transform:rotate(0deg);
+		}
+		to{
+			transform:rotate(360deg);
+		}
+	}
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style:none;
+	}
+
+	body{
+		background: #ccc;
+	}
+
+
+	.container{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+		width: 750px;
+		height: 250px;
+	}
+	.container li{
+		float: left;
+		width: 250px;
+		height: 250px;
+		line-height: 250px;
+		text-align: center;
+		background: #f4f4f4;
+		box-sizing:border-box;
+		border:1px solid #ccc;
+		font-size: 148px;
+	}
+	#heart{
+		position: relative;
+	}
+	#heart i:before, #heart i:after{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition:all 1s ease-in-out;
+	}
+	#heart i:before{
+		content: "\e901";
+		color: #ccc;
+	}
+	#heart i:after{
+		content: "\e902";
+	  	color: #b13947;
+	}
+	#heart:hover i:before, #heart i:after{
+		transform:translate(-50%, -50%) scale(0);
+		opacity: 0;
+	}
+	#heart:hover i:after, #heart i:before{
+		transform:translate(-50%, -50%) scale(1);
+		opacity: 1;
+	}
+	</style>
+	<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+	<script type="text/javascript">
+	$(function  () {
+		
+	})
+	</script>
+</head>
+<body>
+	<ul class="container">
+		<li><i class="icon icon-like"></i></li>
+		<li><i class="icon icon-spinner"></i></li>
+		<li id="heart" ><i class="icon icon-heart-o"></i></li>
+	</ul>
+</body>
+</html>

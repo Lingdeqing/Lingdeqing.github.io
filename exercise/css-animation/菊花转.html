@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body{
+		background: #000;
+	}
+	.spinner{
+		width: 200px;
+		height: 200px;
+
+		border-radius: 100%;
+		border: 5px solid rgba(255,255,255,.2);
+		border-left-color: #fff;
+
+		animation:rotate 1s infinite linear;
+	}
+	@keyframes rotate{
+		from{
+			transform:rotate(0deg);
+		}
+		to{
+			transform:rotate(360deg);
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="spinner"></div>
+</body>
+</html>

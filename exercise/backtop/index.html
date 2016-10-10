@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	.wrap{
+		width: 1190px;
+		margin: 0 auto;
+	}	
+	
+	.back-top{
+		display: none;
+		position: fixed; bottom: 20px; right: 20px;
+		width: 40px; height: 40px;
+		background: url(top_bg.png) no-repeat;
+		background-position: left top;
+		transition:all .6s ease;
+	}
+	/*ie6定位fixed不兼容*/
+	* html,* html body{
+		background-image:url(about:blank);background-attachment:fixed
+	}
+	* html .back-top{
+		position:absolute;left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0) - 20);top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)) - 20)
+	}
+	.back-top:hover{
+		background-position: left -40px;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img class="page" src="tb_bg.jpg" alt="top_bg.png">
+		<a id="backTop" class="back-top ie6fixedBR" href="javascript:;"></a>
+	</div>
+	<script type="text/javascript">
+	var timer = null,
+		isTimer = true,//是否是点回到顶部按钮触发的scroll事件
+		btn = document.getElementById('backTop'),
+		scrollTop = 0;
+
+	btn.onclick = function () {
+		clearInterval(timer);
+		scrollTop = getScrollTop();
+		if(scrollTop > 0){
+			timer = setInterval(function () {
+				isTimer = true;
+				scrollTop -= Math.ceil(scrollTop / 10);
+				if(scrollTop <= 0){
+					scrollTop  = 0;
+					clearInterval(timer);
+				}
+				setScrollTop(scrollTop);
+			}, 30)
+		}
+	}
+	window.onscroll = function () {
+		if(!isTimer){
+			clearInterval(timer);
+		}
+		isTimer = false;
+
+		scrollTop = getScrollTop();
+
+		if(scrollTop > document.documentElement.clientHeight){
+			btn.style.display = 'block';
+		} else {
+			btn.style.display = 'none';
+		}
+	}
+	
+	function getScrollTop() {
+		return document.documentElement.scrollTop || document.body.scrollTop;
+	}
+	function setScrollTop (scrollTop) {
+		document.documentElement.scrollTop = document.body.scrollTop = scrollTop;
+	}
+	</script>
+</body>
+</html>

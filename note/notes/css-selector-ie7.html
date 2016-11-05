@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=7"> 
+	<title>CSS选择器ie7兼容性小结</title>
+	<style type="text/css">
+	table{width:100%;border-collapse:collapse;text-align:center;vertical-align:middle;font-size:14px;}
+	table td,table th{height:40px;line-height:40px;border:1px solid #E0E6ED;}
+	table th{color:#1F2D3D;background:#EFF2F7;}
+	table td{color:#6E7781;}
+	table tbody tr:hover{background:#EFF2F7;}
+	.yes{display:inline-block;position:relative;vertical-align:middle; width:30px;height:30px;background:#20A0FF;border-radius:2px;}
+	.yes:before{display:inline-block;content:"";position:absolute;left:10px;top:2px;width:8px;height:16px;border:3px solid #fff;border-left:none;border-top:none;transform:rotate(30deg);}
+
+	.test-first-child li:first-child{color:red;}
+	.test-last-child li:last-child{color:red;}
+	.test-only-child li:only-child{color:red;}
+	.test-nth-child li:nth-child(2){color:red;}
+	.test-nth-last-child li:nth-last-child(2){color:red;}
+	.test-nth-of-type em:nth-of-type(2){color:red;}
+	.test-nth-of-type b:nth-of-type(2){color:red;}
+	.test-nth-last-of-type em:nth-last-of-type(2){color:red;}
+	.test-nth-last-of-type b:nth-last-of-type(2){color:red;}
+	.test-before:before{content:"insert text ";}
+	.test-after:after{content:"insert text ";}
+	.test-first-letter:first-letter{color:red;}
+	.test-first-line:first-line{color:red;}
+	.test-link-visited:link{color:red;}
+	.test-link-visited:visited{color:blue;}
+	.test-focus:focus{background:red;}
+	.test-hover:hover{background:blue;}
+	.test-active:active{background:yellow;}
+	.test-offspring em{color:red;}
+	.test-son>em{color:red;}
+	.test-next-sibling+em{color:red;}
+	.test-next-siblings~em{color:red;}
+	[test-attr]{color:red;}
+	[test-attr1=val1]{color:red;}
+	[test-attr2~=val1]{color:red;}
+	[test-attr3|=en]{color:red;}
+	[test-attr4^=reg]{color:red;}
+	[test-attr5$=reg]{color:red;}
+	[test-attr6*=reg]{color:red;}
+	</style>
+</head>
+<body>
+	<h1>伪类</h1>
+	<h2>:link,:visited(静态伪类,只能应用于链接)</h2>
+	<a class="test-link-visited" href="##">link</a>
+	<a class="test-link-visited" name="abc">anchor</a>
+	<h2>:focus,:hover,:active(动态伪类,可以应用于所有元素)</h2>
+	<a class="test-focus" href="#">link focus red</a><br>
+	<a class="test-hover" href="#">link hover blue</a><br>
+	<a class="test-active" href="#">link active yellow</a><br>
+	<input class="test-focus"><br>
+	<input class="test-hover"><br>
+	<input class="test-active"><br>
+	<h2>first-child</h2>
+	<ul class="test-first-child">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+	</ul>
+	<h2>last-child</h2>
+	<ul class="test-last-child">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+	</ul>
+	<h2>only-child</h2>
+	<ul class="test-only-child">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+	</ul>
+	<ul class="test-only-child">
+		<li>item1</li>
+	</ul>
+	<h2>nth-child</h2>
+	<ul class="test-nth-child">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+	</ul>
+	<h2>nth-last-child</h2>
+	<ul class="test-nth-last-child">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+	</ul>
+	<h2>nth-of-type</h2>
+	<p class="test-nth-of-type">
+		<em>em1</em>
+		<b>b1</b>
+		<b>b2</b>
+		<em>em2</em>
+	</p>
+	<h2>nth-last-of-type</h2>
+	<p class="test-nth-last-of-type">
+		<em>em1</em>
+		<b>b1</b>
+		<b>b2</b>
+		<em>em2</em>
+	</p>
+
+	<h1>伪元素</h1>
+	<h2>before</h2>
+	<p class="test-before">test before</p>
+	<h2>after</h2>
+	<p class="test-after">test after</p>
+	<h2>first-letter</h2>
+	<p class="test-first-letter">test first-letter</p>
+	<h2>first-line</h2>
+	<p class="test-first-line">test first-line<br>test first-line</p>
+	<h1>后代</h1>
+	<p class="test-offspring">abcedeft<em>em1</em><span>dkjfk<em>em2</em></span></p>
+	<h1>子</h1>
+	<p class="test-son">abcedeft<em>em1</em><span>dkjfk<em>em2</em></span></p>
+	<h1>相邻兄弟</h1>
+	<p class="test-next-sibling">abcedeft<em>adsk</em><span>dkjfk<em>djfkj</em></span></p><em>em1</em>
+	<em>em2</em>
+	<h1>兄弟</h1>
+	<p class="test-next-siblings">abcedeft<em>adsk</em><span>dkjfk<em>djfkj</em></span></p>
+	<em>em1</em>
+	<em>em2</em>
+	<h1>属性选择器</h1>
+	<h2>[attr]</h2>
+	<span test-attr>test attr</span>
+	<span >test attr</span>
+	<h2>[attr=val]</h2>
+	<span test-attr1="val1">test attr</span>
+	<span test-attr1="val2">test attr</span>
+	<h2>[attr~=val]</h2>
+	<span test-attr2="val1 val2 val3">test attr</span>
+	<span test-attr2="val1val2val3">test attr</span>
+	<h2>[attr|=val]</h2>
+	<span test-attr3="en">test attr</span>
+	<span test-attr3="en-zh">test attr</span>
+	<span test-attr3="enzh">test attr</span>
+	<h2>[attr^=val]</h2>
+	<span test-attr4="reg">test attr</span>
+	<span test-attr4="reg-zh">test attr</span>
+	<span test-attr4="regzh">test attr</span>
+	<span test-attr4="zhreg">test attr</span>
+	<h2>[attr$=val]</h2>
+	<span test-attr5="en.reg">test attr</span>
+	<span test-attr5="en-zh.reg">test attr</span>
+	<span test-attr5="enzh .reg">test attr</span>
+	<span test-attr5="regenzh">test attr</span>
+	<h2>[attr*=val]</h2>
+	<span test-attr6="enreg">test attr</span>
+	<span test-attr6="enreg-zh">test attr</span>
+	<span test-attr6="regenzh">test attr</span>
+	<span test-attr6="renzh">test attr</span>
+	<table>
+		<thead>
+			<tr><th>选择器类别</th><th>选择器</th><th>ie7是否兼容</th></tr>
+		</thead>
+		<tbody>
+			<tr><td rowspan="12">伪类</td><td>:link</td><td><span class="yes"></span></td></tr>
+			<tr><td>:visited</td><td><span class="yes"></span></td></tr>
+			<tr><td>:focus</td><td>能应用于a,不能应用于input</td></tr>
+			<tr><td>:hover</td><td><span class="yes"></span></td></tr>
+			<tr><td>:active</td><td>能应用于a,不能应用于input</td></tr>
+			<tr><td>:first-child</td><td><span class="yes"></span></td></tr>
+			<tr><td>:last-child</td><td><span class="no"></span></td></tr>
+			<tr><td>:only-child</td><td><span class="no"></span></td></tr>
+			<tr><td>:nth-child</td><td><span class="no"></span></td></tr>
+			<tr><td>:nth-last-child</td><td><span class="no"></span></td></tr>
+			<tr><td>:nth-of-type</td><td><span class="no"></span></td></tr>
+			<tr><td>:nth-last-of-type</td><td><span class="no"></span></td></tr>
+			<tr><td rowspan="4">伪元素</td><td>:before</td><td><span class="no"></span></td></tr>
+			<tr><td>:after</td><td><span class="no"></span></td></tr>
+			<tr><td>:first-letter</td><td><span class="yes"></span></td></tr>
+			<tr><td>:first-line</td><td><span class="yes"></span></td></tr>
+			<tr><td>后代</td><td>p em</td><td><span class="yes"></span></td></tr>
+			<tr><td>子</td><td>p>em</td><td><span class="yes"></span></td></tr>
+			<tr><td>相邻兄弟</td><td>p+em</td><td><span class="yes"></span></td></tr>
+			<tr><td>兄弟</td><td>p~em</td><td><span class="yes"></span></td></tr>
+			<tr><td rowspan="7">属性选择器</td><td>[attr]</td><td><span class="yes"></span></td></tr>
+			<tr><td>[attr=val]</td><td><span class="yes"></span></td></tr>
+			<tr><td>[attr~=val]</td><td><span class="yes"></span></td></tr>
+			<tr><td>[attr|=en]</td><td><span class="yes"></span></td></tr>
+			<tr><td>[attr^=val]</td><td><span class="yes"></span></td></tr>
+			<tr><td>[attr$=val]</td><td><span class="yes"></span></td></tr>
+			<tr><td>[attr*=en]</td><td><span class="yes"></span></td></tr>
+		</tbody>
+	</table>
+</body>
+</html>
